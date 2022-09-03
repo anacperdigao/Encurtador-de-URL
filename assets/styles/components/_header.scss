@@ -3,7 +3,7 @@
 .header{
     display: grid;
     grid-template-columns: 15% 35% 50%;
-    padding: 40px 100px 20px 100px;
+    padding: 40px 100px 60px 100px;
     align-items: center;
     font-size: 14px;
     font-weight: 700;
@@ -35,7 +35,7 @@
         #cadastrar{
             background-color: $cyan;
             color: white;
-            padding: 15px;
+            padding: 10px 15px;
             border-radius: 50px;
             &:hover{
                 cursor: pointer;

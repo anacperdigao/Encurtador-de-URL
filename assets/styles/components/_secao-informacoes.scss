@@ -1,0 +1,39 @@
+@import '../abstracts/variaveis';
+
+.container__informacoes{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    .container__informacoes-texto{
+        padding: 70px 120px 40px 100px;
+        h1{
+            font-size: 45px;
+            color: $very-dark-violet;
+            padding-bottom: 15px;
+            line-height: 1.2;
+        }
+        p{
+            color: $grayish-violet;
+            line-height: 1.3em;
+            font-size: 16px;
+        }
+        button{
+            margin-top: 30px;
+            background-color: $cyan;
+            color: white;
+            padding: 5px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            &:hover{
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+    .container__informacoes-imagem{
+        img{
+            width: 90%;
+        }
+    }
+    
+}
