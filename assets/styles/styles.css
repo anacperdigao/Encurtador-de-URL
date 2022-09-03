@@ -8,6 +8,8 @@ html, body {
   padding: 40px 100px 20px 100px;
   align-items: center;
   font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 .header nav ul {
   display: flex;
@@ -15,17 +17,22 @@ html, body {
   gap: 20px;
   color: hsl(257deg, 7%, 63%);
 }
+.header nav ul li:hover {
+  color: hsl(255deg, 11%, 22%);
+}
 .header div {
   display: flex;
   flex-direction: row;
   justify-content: end;
   gap: 30px;
   color: hsl(257deg, 7%, 63%);
-  font-weight: 500;
   align-items: center;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 .header div #entrar:hover {
   cursor: pointer;
+  color: hsl(255deg, 11%, 22%);
 }
 .header div #cadastrar {
   background-color: hsl(180deg, 66%, 49%);
@@ -35,4 +42,5 @@ html, body {
 }
 .header div #cadastrar:hover {
   cursor: pointer;
+  opacity: 0.7;
 }/*# sourceMappingURL=styles.css.map */
