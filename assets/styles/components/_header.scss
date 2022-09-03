@@ -1,0 +1,38 @@
+@import '../abstracts/variaveis';
+
+.header{
+    display: grid;
+    grid-template-columns: 15% 35% 50%;
+    padding: 40px 100px 20px 100px;
+    align-items: center;
+    font-size: 14px;
+    nav{
+        ul{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            color: $grayish-violet;
+        }
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 30px;
+        color: $grayish-violet;
+        font-weight: 500;
+        align-items: center;
+        #entrar:hover{
+            cursor: pointer;
+        }
+        #cadastrar{
+            background-color: $cyan;
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}

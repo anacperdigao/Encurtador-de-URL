@@ -1,3 +1,38 @@
 html, body {
   font-family: "Poppins", sans-serif;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 15% 35% 50%;
+  padding: 40px 100px 20px 100px;
+  align-items: center;
+  font-size: 14px;
+}
+.header nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  color: hsl(257deg, 7%, 63%);
+}
+.header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 30px;
+  color: hsl(257deg, 7%, 63%);
+  font-weight: 500;
+  align-items: center;
+}
+.header div #entrar:hover {
+  cursor: pointer;
+}
+.header div #cadastrar {
+  background-color: hsl(180deg, 66%, 49%);
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+}
+.header div #cadastrar:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
