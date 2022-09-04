@@ -217,4 +217,35 @@ html, body {
   font-size: 14px;
   color: hsl(257deg, 7%, 63%);
   line-height: 1.5em;
+}
+
+.conteudo-final {
+  background-image: url(/assets/images/bg-boost-desktop.svg);
+  background-color: hsl(255deg, 11%, 22%);
+  height: 200px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+.conteudo-final h4 {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  padding: 20px 0px;
+}
+.conteudo-final button {
+  background-color: hsl(180deg, 66%, 49%);
+  color: white;
+  padding: 7px 25px;
+  border-radius: 50px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin: 0px 550px;
+}
+.conteudo-final button:hover {
+  cursor: pointer;
+  background-color: #6ADDDD;
 }/*# sourceMappingURL=styles.css.map */

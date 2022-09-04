@@ -1,0 +1,32 @@
+@import '../abstracts/variaveis';
+
+.conteudo-final{
+    background-image: url(/assets/images/bg-boost-desktop.svg);
+    background-color: $very-dark-blue;
+    height: 200px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    h4{
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        padding: 20px 0px;
+    }
+    button{
+        background-color: $cyan;
+        color: white;
+        padding: 7px 25px;
+        border-radius: 50px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        margin: 0px 550px;
+        &:hover{
+            cursor: pointer;
+            background-color: $color-button-hover;
+        }
+    }
+}
