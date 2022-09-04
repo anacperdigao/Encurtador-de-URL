@@ -222,7 +222,7 @@ html, body {
 .conteudo-final {
   background-image: url(/assets/images/bg-boost-desktop.svg);
   background-color: hsl(255deg, 11%, 22%);
-  height: 200px;
+  height: 190px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -254,7 +254,7 @@ html, body {
   background-color: hsl(260deg, 8%, 14%);
   display: grid;
   grid-template-columns: 30% 15% 15% 15% 25%;
-  height: 150px;
+  height: 130px;
   padding: 50px 100px;
 }
 .footer span path {
