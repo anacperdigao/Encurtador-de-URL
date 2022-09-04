@@ -182,4 +182,39 @@ html, body {
   text-align: center;
   margin: 0px 350px 50px 350px;
   line-height: 1.5em;
+}
+
+.container__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px 100px 50px 100px;
+  gap: 80px;
+}
+.container__cards .imagem-card {
+  background-color: hsl(257deg, 27%, 26%);
+  padding: 15px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 30px;
+  position: relative;
+  top: 14%;
+  left: 7%;
+}
+.container__cards .conteudo-card {
+  background-color: white;
+  padding: 60px 30px 20px 30px;
+  height: 150px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+}
+.container__cards .conteudo-card h3 {
+  font-size: 16px;
+  color: hsl(260deg, 8%, 14%);
+  margin-bottom: 20px;
+}
+.container__cards .conteudo-card p {
+  font-size: 14px;
+  color: hsl(257deg, 7%, 63%);
+  line-height: 1.5em;
 }/*# sourceMappingURL=styles.css.map */

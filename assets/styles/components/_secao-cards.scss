@@ -1,0 +1,37 @@
+@import '../abstracts/variaveis';
+
+.container__cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px 100px 50px 100px;
+    gap: 80px;   
+    .imagem-card{
+        background-color: $dark-violet;
+        padding: 15px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 30px;
+        position: relative;
+        top: 14%;
+        left: 7%;
+    }
+    .conteudo-card{
+        background-color: white;
+        padding: 60px 30px 20px 30px;
+        height: 150px;
+        margin-bottom: 100px;
+        border-radius: 10px;
+        
+        h3{
+            font-size: 16px;
+            color: $very-dark-violet;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 14px;
+            color: $grayish-violet;
+            line-height: 1.5em;
+        }
+    }
+}
