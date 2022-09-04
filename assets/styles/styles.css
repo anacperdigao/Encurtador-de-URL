@@ -180,14 +180,14 @@ html, body {
   font-size: 16px;
   color: hsl(257deg, 7%, 63%);
   text-align: center;
-  margin: 0px 350px 50px 350px;
+  margin: 0px 350px 0px 350px;
   line-height: 1.5em;
 }
 
 .container__cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 50px 100px 50px 100px;
+  margin: 10px 100px 40px 100px;
   gap: 80px;
 }
 .container__cards .imagem-card {
@@ -248,4 +248,40 @@ html, body {
 .conteudo-final button:hover {
   cursor: pointer;
   background-color: #6ADDDD;
+}
+
+.footer {
+  background-color: hsl(260deg, 8%, 14%);
+  display: grid;
+  grid-template-columns: 30% 15% 15% 15% 25%;
+  height: 150px;
+  padding: 50px 100px;
+}
+.footer span path {
+  fill: white;
+}
+.footer div h5 {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.footer div ul {
+  color: hsl(0deg, 0%, 75%);
+  font-size: 12px;
+  line-height: 2em;
+}
+.footer div ul li a:hover {
+  color: hsl(180deg, 66%, 49%);
+}
+.footer .links__icones-redes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  gap: 20px;
+  cursor: pointer;
+}
+.footer .links__icones-redes a:hover path {
+  fill: hsl(180deg, 66%, 49%);
 }/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,41 @@
+@import '../abstracts/variaveis';
+
+.footer{
+    background-color: $very-dark-violet;
+    display: grid;
+    grid-template-columns: 30% 15% 15% 15% 25%;
+    height: 150px;
+    padding: 50px 100px;
+    span path{
+        fill: white;
+    }
+    div{
+        h5{
+            color: white;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        ul{
+            color: $gray;
+            font-size: 12px;
+            line-height: 2em;
+            li{
+                a:hover{
+                    color: $cyan;
+                }
+            }
+        }
+    }
+    .links__icones-redes{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 25px;
+        width: 25px;
+        gap: 20px;
+        cursor: pointer;
+        a:hover path{
+            fill: $cyan;
+        }
+    }
+}

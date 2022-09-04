@@ -3,7 +3,7 @@
 .container__cards{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 50px 100px 50px 100px;
+    margin: 10px 100px 40px 100px;
     gap: 80px;   
     .imagem-card{
         background-color: $dark-violet;
