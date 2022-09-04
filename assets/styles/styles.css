@@ -123,7 +123,7 @@ html, body {
 .container__secundario .container__input-resultados .container__input-url input:focus-within::placeholder {
   color: hsl(0deg, 87%, 67%);
 }
-.container__secundario .container__input-resultados .container__input-url button {
+.container__secundario .container__input-resultados .container__input-url button, .container__secundario .container__input-resultados .container__input-url .botao-copia {
   background-color: hsl(180deg, 66%, 49%);
   color: white;
   padding: 5px 25px;
@@ -131,7 +131,7 @@ html, body {
   font-weight: 700;
   letter-spacing: 0.03em;
 }
-.container__secundario .container__input-resultados .container__input-url button:hover {
+.container__secundario .container__input-resultados .container__input-url button:hover, .container__secundario .container__input-resultados .container__input-url .botao-copia:hover {
   cursor: pointer;
   background-color: #6ADDDD;
 }
