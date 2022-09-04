@@ -85,10 +85,13 @@ html, body {
 
 .container__secundario {
   background-color: #F0F1F6;
-  height: 100vh;
+  height: 100%;
   z-index: -100;
 }
-.container__secundario .container__input-url {
+.container__secundario .container__input-resultados {
+  margin-bottom: 100px;
+}
+.container__secundario .container__input-resultados .container__input-url {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -101,26 +104,26 @@ html, body {
   margin: auto;
   border-radius: 10px;
 }
-.container__secundario .container__input-url input {
+.container__secundario .container__input-resultados .container__input-url input {
   border-radius: 10px;
   width: 80%;
   padding-left: 20px;
   font-size: 14px;
 }
-.container__secundario .container__input-url input:focus-within {
+.container__secundario .container__input-resultados .container__input-url input:focus-within {
   outline: none;
   border: 2px solid hsl(0deg, 87%, 67%);
 }
-.container__secundario .container__input-url input:focus-within::-moz-placeholder {
+.container__secundario .container__input-resultados .container__input-url input:focus-within::-moz-placeholder {
   color: hsl(0deg, 87%, 67%);
 }
-.container__secundario .container__input-url input:focus-within:-ms-input-placeholder {
+.container__secundario .container__input-resultados .container__input-url input:focus-within:-ms-input-placeholder {
   color: hsl(0deg, 87%, 67%);
 }
-.container__secundario .container__input-url input:focus-within::placeholder {
+.container__secundario .container__input-resultados .container__input-url input:focus-within::placeholder {
   color: hsl(0deg, 87%, 67%);
 }
-.container__secundario .container__input-url button {
+.container__secundario .container__input-resultados .container__input-url button {
   background-color: hsl(180deg, 66%, 49%);
   color: white;
   padding: 5px 25px;
@@ -128,11 +131,11 @@ html, body {
   font-weight: 700;
   letter-spacing: 0.03em;
 }
-.container__secundario .container__input-url button:hover {
+.container__secundario .container__input-resultados .container__input-url button:hover {
   cursor: pointer;
   background-color: #6ADDDD;
 }
-.container__secundario .container__urls-resultados {
+.container__secundario .container__input-resultados .container__urls-resultados {
   display: grid;
   grid-template-columns: 60% 30% 10%;
   justify-content: center;
@@ -143,15 +146,15 @@ html, body {
   border-radius: 10px;
   font-size: 14px;
 }
-.container__secundario .container__urls-resultados .input-url {
+.container__secundario .container__input-resultados .container__urls-resultados .input-url {
   color: hsl(260deg, 8%, 14%);
 }
-.container__secundario .container__urls-resultados .resultado-url {
+.container__secundario .container__input-resultados .container__urls-resultados .resultado-url {
   color: hsl(180deg, 66%, 49%);
   justify-self: end;
   margin-right: 20px;
 }
-.container__secundario .container__urls-resultados button {
+.container__secundario .container__input-resultados .container__urls-resultados button {
   background-color: hsl(180deg, 66%, 49%);
   color: white;
   padding: 5px 5px;
@@ -159,7 +162,24 @@ html, body {
   font-weight: 700;
   letter-spacing: 0.03em;
 }
-.container__secundario .container__urls-resultados button:hover {
+.container__secundario .container__input-resultados .container__urls-resultados button:hover {
   cursor: pointer;
   background-color: #6ADDDD;
+}
+
+.container__estatisticas {
+  margin: 0px 100px;
+}
+.container__estatisticas h2 {
+  font-size: 30px;
+  color: hsl(255deg, 11%, 22%);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.container__estatisticas #p-estatistica {
+  font-size: 16px;
+  color: hsl(257deg, 7%, 63%);
+  text-align: center;
+  margin: 0px 350px 50px 350px;
+  line-height: 1.5em;
 }/*# sourceMappingURL=styles.css.map */
