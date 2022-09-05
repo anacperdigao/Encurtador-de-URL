@@ -78,3 +78,38 @@
         }
     }
 }
+
+@media screen and (max-width: 480px){
+    .container__secundario{
+        .container__input-resultados{
+            margin-bottom: 80px;
+            .container__input-url{
+                display: flex;
+                flex-direction: column; 
+                justify-content: center;
+                padding: 40px 25px;
+                input{
+                    padding: 5px 25px;  
+                }
+            }
+            .container__urls-resultados{
+                display: flex;
+                flex-direction: column;
+                margin: 15px 30px;
+                .input-url{
+                    font-size: 12px;
+                    margin: 10px 0px;
+                    text-align: center;
+                }
+                .resultado-url{
+                    margin-right: 0px;
+                    margin: 15px 0px;
+                    font-size: 16px;
+                }
+                button{
+                    padding: 5px 40px; 
+                }
+            }
+        }
+    }
+}

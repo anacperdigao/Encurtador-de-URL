@@ -39,3 +39,33 @@
         }
     }
 }
+
+@media screen and (max-width: 480px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: 470px;
+        padding: 40px 30px;
+        align-items: center;
+        span{
+            margin-bottom: 20px;
+        }
+        span path{
+            fill: white;
+            text-align: center;
+        }
+        div{
+            h5{
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            ul{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+        .links__icones-redes{
+            justify-content: center;
+        }
+    } 
+}

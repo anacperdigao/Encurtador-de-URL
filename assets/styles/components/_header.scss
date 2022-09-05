@@ -44,3 +44,56 @@
         }
     }
 }
+
+@media screen and (max-width: 480px){
+    .header{
+        display: grid;
+        grid-template-columns: 15% 35% 50%;
+        padding: 40px 30px 40px 30px; //USEI AQUI
+        align-items: center;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        nav{
+            display: none; //USEI AQUI
+            ul{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                color: $grayish-violet;
+                li:hover{
+                    color: $very-dark-blue ;
+                }
+            }
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            gap: 30px;
+            color: $grayish-violet;
+            align-items: center;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            #entrar{
+                display: none; //USEI AQUI
+            }
+            #entrar:hover{
+                cursor: pointer;
+                color: $very-dark-blue;
+            }
+            #cadastrar{
+                display: none; //USEI AQUI
+                background-color: $cyan;
+                color: white;
+                padding: 10px 15px;
+                border-radius: 50px;
+                &:hover{
+                    cursor: pointer;
+                    background-color: $color-button-hover;
+                }
+            }
+        }
+    }
+}
+    

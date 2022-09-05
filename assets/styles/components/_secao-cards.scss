@@ -3,7 +3,7 @@
 .container__cards{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 10px 100px 40px 100px;
+    margin: 0px 100px 40px 100px;
     gap: 80px;   
     .imagem-card{
         background-color: $dark-violet;
@@ -32,6 +32,21 @@
             font-size: 14px;
             color: $grayish-violet;
             line-height: 1.5em;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .container__cards{
+        display: flex;
+        flex-direction: column;
+        margin: 0px 30px 40px 30px; 
+        gap: 0px; 
+        .imagem-card{
+            margin-bottom: -30px;
+        }
+        .conteudo-card{
+            margin-bottom: 30px;
         }
     }
 }
