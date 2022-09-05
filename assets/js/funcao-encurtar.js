@@ -1,16 +1,15 @@
 //Puxando a URL digitada
 const urlDigitada = document.querySelector("#url-digitada")
 
+
 //Puxando o botão que vai executar a ação
 const botao = document.querySelector("#botao-encurtar")
 
-//Puxando os campos que vou atualizar
-const urlMaior = document.querySelector("#input-url")
-const urlMenor = document.querySelector("#resultado-url")
 
-//Adiconando o evento de escuta
+//Adicionando o evento de escuta para criar a div
 botao.addEventListener('click', e => {
     e.preventDefault()
+    
     if(urlDigitada.value != '' && urlDigitada.value != null){
         encurtandoUrl(urlDigitada)
         return
@@ -19,24 +18,62 @@ botao.addEventListener('click', e => {
   })
 
 
+
 //Criando a função que irá consumir a API
-var menor = ""
-var maior = ""
 
   async function encurtandoUrl(){
 
     const url = `https://api.shrtco.de/v2/shorten?url=${urlDigitada.value}`
+    let menor = ""
+    let maior = ""
 
     fetch(url)
     .then(res => res.json())
     .then((data) => {
-        console.log(data)
     
-    maior = data.result.original_link;
-    menor = data.result.short_link;
+    maior = data.result.original_link
+    menor = data.result.short_link
 
-    urlMaior.textContent = maior;
-    urlMenor.textContent = menor;
+    //Criando as divs que vou guardar as informações da API
+
+    const pInput = document.createElement("p")
+    pInput.setAttribute("class","input-url")
+    pInput.textContent = maior
+    
+    
+    const pResultado = document.createElement("p")
+    pResultado.setAttribute("class","resultado-url")
+    pResultado.textContent = menor
+    
+    const botaoCopia = document.createElement("button")
+    botaoCopia.setAttribute("class","botao-copia")
+    botaoCopia.innerHTML = "Copiar"
+    botaoCopia.addEventListener("click",copiarLink)
+    
+    const divResultado = document.createElement("div")
+    divResultado.setAttribute("class","container__urls-resultados")
+    
+    const sectionResultados = document.querySelector(".container__input-resultados")
+    
+    divResultado.appendChild(pInput)
+    divResultado.appendChild(pResultado)
+    divResultado.appendChild(botaoCopia)
+    sectionResultados.appendChild(divResultado)
+
     })
+
+    urlDigitada.value = ""
 }
 
+//----------------------------------------------------------------------------------
+
+function copiarLink(event){
+
+    const alvoEvento = event.target
+    const irmaoEvento = alvoEvento.previousSibling
+
+    navigator.clipboard.writeText(irmaoEvento.textContent)
+    alvoEvento.innerHTML = "Copiado!"
+    alvoEvento.style.background = "hsl(257, 27%, 26%)"
+
+}

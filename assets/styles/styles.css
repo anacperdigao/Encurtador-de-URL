@@ -87,6 +87,7 @@ html, body {
   background-color: #F0F1F6;
   height: 100%;
   z-index: -100;
+  padding-top: 20px;
 }
 .container__secundario .container__input-resultados {
   margin-bottom: 100px;

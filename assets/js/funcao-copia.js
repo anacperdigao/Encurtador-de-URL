@@ -1,16 +1,20 @@
 //Puxando o botao de copiar
-const botaoCopia = document.querySelector("#botao-copia")
+const botaoCopia = document.querySelectorAll(".botao-copia")
 
 //Chamando o evento de escuta
-botaoCopia.addEventListener("click", copiarLink)
+for(let i = 0; i < botaoCopia.length; i++){
+    botaoCopia[i].addEventListener("click", copiarLink)
+}
 
 
-function copiarLink(){
-    //Puxando o valor do texto que quero copiar
-    let textoCopia = document.querySelector("#resultado-url").textContent
+function copiarLink(event){
 
-    navigator.clipboard.writeText(textoCopia)
-    botaoCopia.innerHTML = "Copiado!"
-    botaoCopia.style.background = "hsl(257, 27%, 26%)"
+    const alvoEvento = event.target
+    const irmaoEvento = alvoEvento.previousSibling
+
+    navigator.clipboard.writeText(irmaoEvento.textContent)
+    alvoEvento.innerHTML = "Copiado!"
+    alvoEvento.style.background = "hsl(257, 27%, 26%)"
+
 }
 
