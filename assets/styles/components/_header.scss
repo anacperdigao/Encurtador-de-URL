@@ -47,62 +47,63 @@
         display: none;
     }   
 }
+.menu-lateral-mobile{
+    display: none;
+}
 
 @media screen and (max-width: 480px){
     .header{
-        display: grid;
-        grid-template-columns: 80% 20% ;
-        padding: 40px 30px 40px 30px; //USEI AQUI
-        align-content: center;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 0.03em;
+        grid-template-columns: 80% 20% ;//USEI AQUI
+        padding: 40px 30px 10px 30px; //USEI AQUI
         nav{
             display: none; //USEI AQUI
-            ul{
-                display: flex;
-                flex-direction: row;
-                gap: 20px;
-                color: $grayish-violet;
-                li:hover{
-                    color: $very-dark-blue ;
-                }
-            }
         }
         div{
-            display: none;
-            flex-direction: row;
-            justify-content: end;
-            gap: 30px;
-            color: $grayish-violet;
-            align-items: center;
-            font-weight: 700;
-            letter-spacing: 0.03em;
+            display: none;//USEI AQUI
             #entrar{
                 display: none; //USEI AQUI
             }
-            #entrar:hover{
-                cursor: pointer;
-                color: $very-dark-blue;
-            }
             #cadastrar{
                 display: none; //USEI AQUI
-                background-color: $cyan;
-                color: white;
-                padding: 10px 15px;
-                border-radius: 50px;
-                &:hover{
-                    cursor: pointer;
-                    background-color: $color-button-hover;
-                }
             }
         }
         .icone-menu{
-            display: inline-block;
-            width: 45px;
-            height: 45px;
-            justify-self: center;
+            display: inline-block;//USEI AQUI
+            width: 45px;//USEI AQUI
+            height: 45px;//USEI AQUI
+            justify-self: center;//USEI AQUI
         } 
     }
+}
+.menu-lateral-mobile{
+    display: none;
+    background-color: $dark-violet;
+    color: white;
+    margin: 0px 30px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 0px;
+
+    ul{
+        li{
+            padding: 15px 0px;
+            &:hover{
+                color: $very-dark-blue;
+            }
+        }
+        #entrar-mobile{
+            border-top: 1px solid $grayish-violet ;
+        }
+        #cadastrar-mobile{
+            background-color: $cyan;
+            color: white;
+            padding: 10px 80px;
+            border-radius: 50px;
+        }
+    }
+}
+.menu-lateral-mobile--ativo{
+    display: flex;
 }
     

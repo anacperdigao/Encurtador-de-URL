@@ -53,55 +53,26 @@ html, body {
   display: none;
 }
 
+.menu-lateral-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 480px) {
   .header {
-    display: grid;
     grid-template-columns: 80% 20%;
-    padding: 40px 30px 40px 30px;
-    align-content: center;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.03em;
+    padding: 40px 30px 10px 30px;
   }
   .header nav {
     display: none;
   }
-  .header nav ul {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    color: hsl(257deg, 7%, 63%);
-  }
-  .header nav ul li:hover {
-    color: hsl(255deg, 11%, 22%);
-  }
   .header div {
     display: none;
-    flex-direction: row;
-    justify-content: end;
-    gap: 30px;
-    color: hsl(257deg, 7%, 63%);
-    align-items: center;
-    font-weight: 700;
-    letter-spacing: 0.03em;
   }
   .header div #entrar {
     display: none;
   }
-  .header div #entrar:hover {
-    cursor: pointer;
-    color: hsl(255deg, 11%, 22%);
-  }
   .header div #cadastrar {
     display: none;
-    background-color: hsl(180deg, 66%, 49%);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 50px;
-  }
-  .header div #cadastrar:hover {
-    cursor: pointer;
-    background-color: #6ADDDD;
   }
   .header .icone-menu {
     display: inline-block;
@@ -110,6 +81,36 @@ html, body {
     justify-self: center;
   }
 }
+.menu-lateral-mobile {
+  display: none;
+  background-color: hsl(257deg, 27%, 26%);
+  color: white;
+  margin: 0px 30px;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.menu-lateral-mobile ul li {
+  padding: 15px 0px;
+}
+.menu-lateral-mobile ul li:hover {
+  color: hsl(255deg, 11%, 22%);
+}
+.menu-lateral-mobile ul #entrar-mobile {
+  border-top: 1px solid hsl(257deg, 7%, 63%);
+}
+.menu-lateral-mobile ul #cadastrar-mobile {
+  background-color: hsl(180deg, 66%, 49%);
+  color: white;
+  padding: 10px 80px;
+  border-radius: 50px;
+}
+
+.menu-lateral-mobile--ativo {
+  display: flex;
+}
+
 .container__primario {
   margin-bottom: 100px;
 }
@@ -171,7 +172,7 @@ html, body {
     text-align: center;
   }
   .container__primario .container__informacoes .container__informacoes-imagem {
-    padding: 0px 30px 0px 30px;
+    padding: 30px 30px 0px 30px;
   }
   .container__primario .container__informacoes .container__informacoes-imagem img {
     width: 100%;
