@@ -49,13 +49,16 @@ html, body {
   cursor: pointer;
   background-color: #6ADDDD;
 }
+.header .icone-menu {
+  display: none;
+}
 
 @media screen and (max-width: 480px) {
   .header {
     display: grid;
-    grid-template-columns: 15% 35% 50%;
+    grid-template-columns: 80% 20%;
     padding: 40px 30px 40px 30px;
-    align-items: center;
+    align-content: center;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -73,7 +76,7 @@ html, body {
     color: hsl(255deg, 11%, 22%);
   }
   .header div {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: end;
     gap: 30px;
@@ -99,6 +102,12 @@ html, body {
   .header div #cadastrar:hover {
     cursor: pointer;
     background-color: #6ADDDD;
+  }
+  .header .icone-menu {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    justify-self: center;
   }
 }
 .container__primario {
@@ -275,7 +284,6 @@ html, body {
     font-size: 12px;
     margin: 10px 0px 30px 0px;
     text-align: center;
-    padding: 0px 10px;
   }
   .container__secundario .container__input-resultados .container__urls-resultados .resultado-url {
     margin-right: 0px;
