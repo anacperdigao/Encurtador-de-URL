@@ -1,3 +1,6 @@
+//Importando funcao do modulo "funcao-copia.js"
+import {copiarLink} from './funcao-copia.js'
+
 //Puxando a URL digitada
 const urlDigitada = document.querySelector("#url-digitada")
 
@@ -6,7 +9,7 @@ const urlDigitada = document.querySelector("#url-digitada")
 const botao = document.querySelector("#botao-encurtar")
 
 
-//Adicionando o evento de escuta para criar a div
+//Adicionando o evento de escuta para o botao
 botao.addEventListener('click', e => {
     e.preventDefault()
     
@@ -63,17 +66,4 @@ botao.addEventListener('click', e => {
     })
 
     urlDigitada.value = ""
-}
-
-//----------------------------------------------------------------------------------
-
-function copiarLink(event){
-
-    const alvoEvento = event.target
-    const irmaoEvento = alvoEvento.previousSibling
-
-    navigator.clipboard.writeText(irmaoEvento.textContent)
-    alvoEvento.innerHTML = "Copiado!"
-    alvoEvento.style.background = "hsl(257, 27%, 26%)"
-
 }

@@ -7,7 +7,7 @@ for(let i = 0; i < botaoCopia.length; i++){
 }
 
 
-function copiarLink(event){
+export function copiarLink(event){
 
     const alvoEvento = event.target
     const irmaoEvento = alvoEvento.previousSibling
