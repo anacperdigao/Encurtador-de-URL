@@ -73,11 +73,11 @@ async function encurtandoUrl(){
     urlDigitada.value = ""
 }
 
-
+//----------------------------------------------------------------------------------------------------------
 
 function urlsGravadas(){
   
-  if (sessionStorage.getItem("keyMaior") != "" || sessionStorage.getItem("keyMenor") != ""){
+  if (sessionStorage.getItem("keyMaior") === "" || sessionStorage.getItem("keyMenor") === ""){
     
     // Pegando no sessionStorage
     let keyMaior = "keyMaior"
@@ -109,6 +109,5 @@ function urlsGravadas(){
     divResultado.appendChild(pResultado)
     divResultado.appendChild(botaoCopia)
     sectionResultados.appendChild(divResultado)
-    
   }
 }
