@@ -22,7 +22,8 @@
 - ``Funcionalidade 1:`` Encurtar um link consumindo uma API para isso.
 - ``Funcionalidade 2:`` Copiar o link reduzido com apenas um botão.
 - ``Funcionalidade 3:`` Adicionar quantos links quiser e os anteriores continuarem aparecendo.
-- ``Funcionalidade 4:`` Responsividade Mobile com menu escondido.
+- ``Funcionalidade 4:`` Uso de sessionStorage para guardar sempre o último link encurtado enquanto a aba do navegador estiver aberta mesmo recarregando a página.
+- ``Funcionalidade 5:`` Responsividade Mobile com menu escondido.
 
 
 <br>
@@ -31,6 +32,7 @@
 <p> Nesse projeto já utilizei com facilidade diversos conceitos de Sass, inclusive achando mais fácil a leitura do código pois o CSS fica aninhado igual está no HTML. </p>
 <p> Em JS consolidei os conhecimentos em manipulação do DOM, como por exemplo criando divs com setAttribute e appendChild. </p>
 <p> Ainda em JS, esse foi mais um projeto com consumo de API utilizando o método FETCH.</p>
+<p> Depois do projeto finalizado, decidi aplicar conceitos de sessionStorage e localStorage, preferindo nesse caso utilizar o sessionStorage para que os dados durassem apenas enquanto o navegador estivesse aberto.</p>
 
 <br>
 <h2 align="center"> :file_folder: Acesso ao projeto </h2>
