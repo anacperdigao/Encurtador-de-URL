@@ -44,16 +44,10 @@ async function encurtandoUrl(){
     const pInput = document.createElement("p")
     pInput.setAttribute("class","input-url")
     pInput.textContent = maior
-    // Já guardando no localStorage
-    let keyMaior = "keyMaior"
-    localStorage.setItem(keyMaior, maior)    
-    
+   
     const pResultado = document.createElement("p")
     pResultado.setAttribute("class","resultado-url")
     pResultado.textContent = menor
-    // Já guardando no localStorage
-    let keyMenor = "keyMenor"
-    localStorage.setItem(keyMenor, menor)
     
     const botaoCopia = document.createElement("button")
     botaoCopia.setAttribute("class","botao-copia")
@@ -70,7 +64,53 @@ async function encurtandoUrl(){
     divResultado.appendChild(botaoCopia)
     sectionResultados.appendChild(divResultado)
 
+    // Guardando no localStorage
+    let keyMaior = "keyMaior"
+    let keyMenor = "keyMenor"
+    localStorage.setItem(keyMaior, maior)    
+    localStorage.setItem(keyMenor, menor)    
+
     })
 
     urlDigitada.value = ""
+}
+
+
+
+function urlsGravadas(){
+  
+  if (localStorage.getItem("keyMaior") != "" || localStorage.getItem("keyMenor") != ""){
+    
+    // Pegando no localStorage
+
+    let keyMaior = "keyMaior"
+    let keyMenor = "keyMenor"
+    localStorage.getItem(keyMaior)    
+    localStorage.getItem(keyMenor)
+    
+
+    const pInput = document.createElement("p")
+    pInput.setAttribute("class","input-url")
+    pInput.textContent = localStorage.getItem(keyMaior) 
+    
+    const pResultado = document.createElement("p")
+    pResultado.setAttribute("class","resultado-url")
+    pResultado.textContent = localStorage.getItem(keyMenor)
+    
+    const botaoCopia = document.createElement("button")
+    botaoCopia.setAttribute("class","botao-copia")
+    botaoCopia.innerHTML = "Copiar"
+    botaoCopia.addEventListener("click",copiarLink)
+    
+    const divResultado = document.createElement("div")
+    divResultado.setAttribute("class","container__urls-resultados")
+    
+    const sectionResultados = document.querySelector(".container__input-resultados")
+    
+    divResultado.appendChild(pInput)
+    divResultado.appendChild(pResultado)
+    divResultado.appendChild(botaoCopia)
+    sectionResultados.appendChild(divResultado)
+    
+  }
 }
