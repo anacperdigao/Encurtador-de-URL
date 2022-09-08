@@ -77,14 +77,15 @@ async function encurtandoUrl(){
 
 function urlsGravadas(){
   
-  if (sessionStorage.getItem("keyMaior") === "" || sessionStorage.getItem("keyMenor") === ""){
-    
     // Pegando no sessionStorage
+    
     let keyMaior = "keyMaior"
     let keyMenor = "keyMenor"
     sessionStorage.getItem(keyMaior)    
     sessionStorage.getItem(keyMenor)
-    
+  
+    if (sessionStorage.getItem("keyMaior").length > 0 || sessionStorage.getItem("keyMenor").length > 0){    
+
 
     //Refazendo a DIV para a informação do localStorage
     const pInput = document.createElement("p")
@@ -110,4 +111,5 @@ function urlsGravadas(){
     divResultado.appendChild(botaoCopia)
     sectionResultados.appendChild(divResultado)
   }
+
 }
