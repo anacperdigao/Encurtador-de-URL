@@ -1,9 +1,11 @@
 //Importando funcao do modulo "funcao-copia.js"
 import {copiarLink} from './funcao-copia.js'
 
+// No carregamento da pagina, vou puxar o que tem no localStorage
+window.onload = urlsGravadas
+
 //Puxando a URL digitada
 const urlDigitada = document.querySelector("#url-digitada")
-
 
 //Puxando o botão que vai executar a ação
 const botao = document.querySelector("#botao-encurtar")
@@ -24,7 +26,7 @@ botao.addEventListener('click', e => {
 
 //Criando a função que irá consumir a API
 
-  async function encurtandoUrl(){
+async function encurtandoUrl(){
 
     const url = `https://api.shrtco.de/v2/shorten?url=${urlDigitada.value}`
     let menor = ""
@@ -42,11 +44,16 @@ botao.addEventListener('click', e => {
     const pInput = document.createElement("p")
     pInput.setAttribute("class","input-url")
     pInput.textContent = maior
-    
+    // Já guardando no localStorage
+    let keyMaior = "keyMaior"
+    localStorage.setItem(keyMaior, maior)    
     
     const pResultado = document.createElement("p")
     pResultado.setAttribute("class","resultado-url")
     pResultado.textContent = menor
+    // Já guardando no localStorage
+    let keyMenor = "keyMenor"
+    localStorage.setItem(keyMenor, menor)
     
     const botaoCopia = document.createElement("button")
     botaoCopia.setAttribute("class","botao-copia")
