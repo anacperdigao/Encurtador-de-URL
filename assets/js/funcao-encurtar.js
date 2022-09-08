@@ -24,8 +24,7 @@ botao.addEventListener('click', e => {
 
 
 
-//Criando a função que irá consumir a API
-
+//Criando a função que irá consumir a API e criando as divs com as informações da API
 async function encurtandoUrl(){
 
     const url = `https://api.shrtco.de/v2/shorten?url=${urlDigitada.value}`
@@ -40,7 +39,6 @@ async function encurtandoUrl(){
     menor = data.result.short_link
 
     //Criando as divs que vou guardar as informações da API
-
     const pInput = document.createElement("p")
     pInput.setAttribute("class","input-url")
     pInput.textContent = maior
@@ -64,11 +62,11 @@ async function encurtandoUrl(){
     divResultado.appendChild(botaoCopia)
     sectionResultados.appendChild(divResultado)
 
-    // Guardando no localStorage
+    // Guardando no sessionStorage
     let keyMaior = "keyMaior"
     let keyMenor = "keyMenor"
-    localStorage.setItem(keyMaior, maior)    
-    localStorage.setItem(keyMenor, menor)    
+    sessionStorage.setItem(keyMaior, maior)    
+    sessionStorage.setItem(keyMenor, menor)    
 
     })
 
@@ -79,23 +77,23 @@ async function encurtandoUrl(){
 
 function urlsGravadas(){
   
-  if (localStorage.getItem("keyMaior") != "" || localStorage.getItem("keyMenor") != ""){
+  if (sessionStorage.getItem("keyMaior") != "" || sessionStorage.getItem("keyMenor") != ""){
     
-    // Pegando no localStorage
-
+    // Pegando no sessionStorage
     let keyMaior = "keyMaior"
     let keyMenor = "keyMenor"
-    localStorage.getItem(keyMaior)    
-    localStorage.getItem(keyMenor)
+    sessionStorage.getItem(keyMaior)    
+    sessionStorage.getItem(keyMenor)
     
 
+    //Refazendo a DIV para a informação do localStorage
     const pInput = document.createElement("p")
     pInput.setAttribute("class","input-url")
-    pInput.textContent = localStorage.getItem(keyMaior) 
+    pInput.textContent = sessionStorage.getItem(keyMaior) 
     
     const pResultado = document.createElement("p")
     pResultado.setAttribute("class","resultado-url")
-    pResultado.textContent = localStorage.getItem(keyMenor)
+    pResultado.textContent = sessionStorage.getItem(keyMenor)
     
     const botaoCopia = document.createElement("button")
     botaoCopia.setAttribute("class","botao-copia")
